@@ -2,17 +2,21 @@ from pybit.unified_trading import HTTP
 import pprint
 import time
 
+api_key_donare=input('Введи API KEY аккаунта, с которого будут копироваться ордера:')
+api_secret_donare=input('Введи API secret аккаунта, с которого будут копироваться ордера:')
+api_key_target=input('Введи API KEY аккаунта, на который будут копироваться ордера:')
+api_secret_target=input('Введи API secret аккаунта, на который будут копироваться ордера:')
+
 session_donare = HTTP(
     testnet=False,
-    api_key='6dv1h29G0Bo5lHZpS0',
-    api_secret='03d4cwZUQ1dGUwNrle35PqXzhLzvwAFxrWCu'
+    api_key=api_key_donare,
+    api_secret=api_secret_donare
 )
 
 session_target = HTTP(
-    #subaccount
     testnet=False,
-    api_key='qKBaiOKV037iNdkw6D',
-    api_secret='EQNhG1FkU58F7A7buis9u0VQPUBBJDXcAd8z'
+    api_key=api_key_target,
+    api_secret=api_secret_target
 )
 
 category = 'spot'
